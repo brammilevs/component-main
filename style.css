@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+::before
+::after{
+  box-sizing: border-box;
+}
+:root{
+
+  /*  primary-Colors */
+
+--Dark-cyan-: hsl(158, 36%, 37%);
+--very-dark-cyan-: hsl(158, 36%, 20%);
+--Cream-: hsl(30, 38%, 92%);
+
+/* Neutral */
+
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White-: hsl(0, 0%, 100%);
+
+/* font-style */
+
+--fw-neutral:500;
+--fw-primary:700;
+
+--ff-neutral:'Montserrat';
+--ff-primary:'Fraunces';
+
+}
+
+@font-face {
+  src:url(Montserrat-VariableFont_wght.ttf);  
+  font-family: "Montserrat";
+  font-weight: 100 ,500, 700;
+ 
+}
+@font-face{
+  src: url(Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf),
+
+   url(Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+  
+  
+  font-family: "Fraunces";
+  font-weight:700 ;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+body{
+  background-color: var(--Cream-);
+  font-family: var(--ff-neutral);
+  font-size: 14px;
+  color: var(--Dark-grayish-blue);
+  display: grid;
+
+  place-items: center;
+
+}
+
+.product{
+  background-color: var(--White-);
+  border-radius: 1rem;
+  margin: 1rem;
+  overflow: hidden;
+  display: grid;
+  max-width: 652px;
+   
+}
+
+@media (min-width:650px) {
+  .product{ 
+ grid-template-columns: 1fr 1fr;
+ 
+ }
+
+ .product__content{
+  padding: 1.2rem;
+ }
+ }
+
+
+.product__content{
+  margin-inline: 1.5rem;
+  padding-block: 0.8rem;
+  display: grid;
+}
+
+.product__category{
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: var(--fw-primary);
+  font-size: 11px;
+}
+
+.product__title{
+  font-family: var(--ff-primary);
+  font-weight: var(--ff-primary);
+  color: var(--Very-dark-blue);
+  font-size: 1.8rem;
+  line-height:1.9rem;
+}
+
+p{
+  margin-block: 0.5rem;
+  font-size:1rem;
+  line-height: 1.4rem;
+  word-wrap: wrap;
+  font-weight: var(--fw-neutral);
+}
+
+.product__prize{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.prize{
+  font-family: var(--ff-primary);
+  font-size: 1.5rem;
+  color: var(--Dark-cyan-);
+}
+
+.old__prize{
+  font-size: 0.7rem;
+  text-decoration: line-through;
+
+}
+
+.btn{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  background-color: var(--Dark-cyan-);
+  border-radius: 0.5rem;
+  margin-block: 1rem;
+  border:0 ;
+  color: var(--White-);
+  height: 2.5rem;
+  font-size: 12px;
+  font-weight: var(--fw-primary);
+  cursor: pointer;
+ 
+}
+
+.btn:hover,:focus{
+  background-color: var(--very-dark-cyan-);
+}
+
+
+
+
+
